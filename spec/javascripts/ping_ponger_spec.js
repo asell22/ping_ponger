@@ -31,4 +31,24 @@ describe('ping ponger', function() {
 
     expect(scoreNode2.innerText).toEqual('1');
   })
+
+  it('creates an input fields for player names', function() {
+    var inputNode1 = document.querySelector('#player1Name');
+
+    expect(inputNode1.placeholder).toEqual('Enter Player Name:');
+
+  })
+
+  it('adds a player name to button text', function() {
+    var inputNode1 = document.querySelector('#player1Name');
+    var name1 = document.querySelector('#player1');
+    var submitButton = document.querySelector('#submitName');
+
+    inputNode1.value = 'Rosa';
+    submitButton.click();
+
+    expect(name1.innerText).toEqual('Rosa');
+
+
+  })
 });
